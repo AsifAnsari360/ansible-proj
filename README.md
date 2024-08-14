@@ -63,8 +63,54 @@ ansible_ssh_private_key_file=/home/ubuntu/keys/test-key.pem  #your path may be d
 ansible servers -m ping
 ```
 
-### Create Index.html file in playbooks
+### Create an Index.html file in playbooks
 
+- First, change your directory to
+```bash
+ cd /etc/ansible/
+```
+- Then create a playbook directory
+```bash
+ mkdir playbooks
+```
+- Change the directory to playbooks and in that create an index.html file.
+```bash
+ cd /playbooks
+```
+```bash
+ sudo vim index.html
+```
+- Paste the HTML code in the index.html file.
+```bash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a simple HTML page.</p>
+</body>
+</html>
+```
+
+#### Come to the root directory where ansible.yml file is stored and RUN the following command.
+
+- Once the playbook file is ready, we will check for the syntax of the playbook using the below command:
+```bash
+ansible-playbook --syntax-check ansible.yml
+```
+- Once the syntax is checked and is correct, we can proceed with running the playbook using the below command:
+```bash
+ansible-playbook ansible.yml
+```
+
+You can see your HTML web page using your Public IP Address. Copy your Public IP Address and Paste it on any web browser. 
+
+Hence, we were successful in installing and configuring the Nginx server on Ubuntu via Ansible.
 
 
 
