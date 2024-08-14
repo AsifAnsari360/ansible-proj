@@ -6,12 +6,12 @@
   tasks:
     - name: Install nginx package
       apt:
-        name: nginx  # installs the httpd package
+        name: nginx  # installs the nginx package
         state: present
 
     - name: Enable nginx service
       service:
-        name: nginx  # enables the httpd service
+        name: nginx  # enables the nginx service
         state: started
 
     - name: Copy the Index.html file
