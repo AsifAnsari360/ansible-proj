@@ -1,0 +1,23 @@
+---
+- name: Install Package
+  hosts: servers
+  become: yes
+
+  tasks:
+    - name: Install nginx package
+      apt:
+        name: nginx  # installs the httpd package
+        state: present
+
+    - name: Enable nginx service
+      service:
+        name: nginx  # enables the httpd service
+        state: started
+
+    - name: Copy the Index.html file
+      copy:  # copies the index.html page from Controller node to Target
+        src:  /etc/ansible/playbooks/index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: 0644 
