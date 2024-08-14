@@ -46,6 +46,7 @@ chmod 400 test-key.pem
 ```
 The above scp command may be different for you. You can find it here.
 
+![aws](https://github.com/Harvad-stack/Harvad-stack/blob/main/aws.png)
 
 After this again edit hosts, and add the following code for the controller node to be able to connect to the Target Node.
 ```bash
@@ -57,11 +58,13 @@ ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
 ansible_ssh_private_key_file=/home/ubuntu/keys/test-key.pem  #your path may be different
 ```
+![hosts](https://github.com/Harvad-stack/Harvad-stack/blob/main/hosts.png)
 
 - To check if the controller node is connected to the Target Node. Use the following command.
 ```bash
 ansible servers -m ping
 ```
+![ping](https://github.com/Harvad-stack/Harvad-stack/blob/main/ping.png)
 
 ### Create an Index.html file in playbooks
 
@@ -108,10 +111,13 @@ ansible-playbook --syntax-check ansible.yml
 ansible-playbook ansible.yml
 ```
 
+![output](https://github.com/Harvad-stack/Harvad-stack/blob/main/ansible.png)
+
 You can see your HTML web page using your Public IP Address. Copy your Public IP Address and Paste it on any web browser. 
 
-Hence, we were successful in installing and configuring the Nginx server on Ubuntu via Ansible.
+![web server](https://github.com/Harvad-stack/Harvad-stack/blob/main/output.png)
 
+Hence, we were successful in installing and configuring the Nginx server on Ubuntu via Ansible.
 
 
 
