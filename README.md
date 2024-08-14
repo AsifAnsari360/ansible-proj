@@ -102,7 +102,7 @@ ansible servers -m ping
 
 #### Come to the root directory where ansible.yml file is stored and RUN the following command.
 
-- Once the playbook file is ready, we will check for the syntax of the playbook using the below command:
+- We will check for the syntax of the playbook using the below command:
 ```bash
 ansible-playbook --syntax-check ansible.yml
 ```
