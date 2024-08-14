@@ -24,11 +24,13 @@ Once you have installed Ansible. Use the ssh method to authenticate the controll
 ```bash
 sudo vim /etc/ansible/hosts
 ```
-In the hosts file add the below lines of code. Add your instance's Public IP address. 
+In the hosts file add the below lines of code. Add your instance's Public IP address. Save and exit using :wq
 ```bash
 [servers]
 ansible-server ansible_host=<Public IP>
 ```
+Save and exit using  :wq
+
 Create a keys directory on your remote terminal, to copy the your_key_name.pem key from the local system to your remote instance (keys directory). Open the terminal on your local system and change the directory where you have saved your security key (your_key_name.pem). 
 
 - In your Remote terminal 
@@ -58,6 +60,8 @@ ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
 ansible_ssh_private_key_file=/home/ubuntu/keys/test-key.pem  #your path may be different
 ```
+Save and exit using  :wq
+
 ![hosts](https://github.com/Harvad-stack/Harvad-stack/blob/main/hosts.png)
 
 - To check if the controller node is connected to the Target Node. Use the following command.
@@ -99,6 +103,7 @@ ansible servers -m ping
 </body>
 </html>
 ```
+Save and exit using  :wq
 
 #### Come to the root directory where ansible.yml file is stored and RUN the following command.
 
